@@ -1,4 +1,3 @@
-import { clearPreviewData } from 'next/dist/server/api-utils';
 import styles from './swatch.module.scss';
 
 const Swatch = ({color }) => {
