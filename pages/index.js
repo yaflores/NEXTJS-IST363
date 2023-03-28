@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Layout from '../components/Layout';
 
 import { getAllVehicles, getAllColors } from '../lib/api';
+import CarColorPicker from '../components/CarColorPicker';
 
 export async function getStaticProps() {
   // Get external data from the file system, API, DB, etc.
@@ -26,16 +27,7 @@ export async function getStaticProps() {
 const Homepage = ({data, colors}) => {
   return <Layout>
     <h1>Homepage</h1>
-    <h2>Color picker</h2>
-    <div>
-      Large images goes here
-    </div>
-    <ul>
-      {colors.map((color) => {
-        return <Swatch color={color} />
-      })}
-    </ul>
-    <h3>Color name</h3>
+    < CarColorPicker colors={colors} />
   </Layout>
 }
 export default Homepage
