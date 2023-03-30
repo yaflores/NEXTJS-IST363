@@ -25,7 +25,6 @@ const Swatches = ({colors, clickHandler, activeColor }) => {
                 {color.slug === activeColor.slug &&
                     <Icon icon="check" />
                 }
-
             </li>
         })}
     </ul>
