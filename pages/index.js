@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import Swatch from '../components/Swatch';
 import Button from '../components/Button';
 import Header from '../components/Header';
 import Image from 'next/image';
