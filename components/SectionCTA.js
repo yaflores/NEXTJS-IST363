@@ -3,7 +3,9 @@ import Heading from './Heading';
 
 const SectionCTA = () => {
     return <section className={styles.sectionCTA}>
-        CTA goes here 
+        <Heading level={2}>
+            CTA goes here 
+        </Heading>
     </section>
 }
 export default SectionCTA;
