@@ -36,4 +36,4 @@ const VehiclesPage = ({ data }) => {
         })}
     </Layout>
 }
-export default VehiclesPage;s
+export default VehiclesPage;
