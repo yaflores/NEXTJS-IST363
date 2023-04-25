@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import TrimPicker from '../../components/TrimPicker';
 
 import { getAllVehicleSlugs, getVehicleDataBySlug } from '../../lib/api'
 
@@ -33,7 +34,9 @@ export async function getStaticProps({params}) {
 }
   
 export default function SingleVehiclePage({ vehicleData }) {
-    const {title, featuredImage} = vehicleData;
+    const {title, featuredImage, vehicleInformation} = vehicleData;
+    const {trimLevels} = vehicleInformation;
+    console.log({trimLevels});
     return <div>
         <h1>{title}</h1>
         {featuredImage && 
@@ -44,6 +47,7 @@ export default function SingleVehiclePage({ vehicleData }) {
           height={featuredImage.node.mediaDetails.height}
           />
         }
+        <TrimPicker trimLevels={trimLevels} />
     </div>
 }
 
