@@ -1,27 +1,17 @@
-import { Fragment } from 'react'
+// core 
+import { Fragment } from 'react';
 
+// custom components 
 import Footer from './Footer';
 import Header from './Header';
-import Link from 'next/link';
+import Showcase from './Showcase';
 
 const Layout = ({children}) => {
     return <Fragment>
         <Header />
-        <nav>
-            <ul>
-                <li>
-                    <Link href="/">
-                    Home
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/products">
-                    Products
-                    </Link>
-                </li>
-            </ul>
-        </nav>
+        
         <main>
+            <Showcase />
             {children}
         </main>
         <Footer />

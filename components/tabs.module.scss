@@ -1,0 +1,29 @@
+@use '../sass/abstracts/vars';
+@use '../sass/abstracts/mixins';
+
+.tabs {
+    //background-color: yellow;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-bottom: 1px solid gray;
+    margin-top: 2rem;
+    width: 100%;
+    @include mixins.breakpoint(tablet) {
+        width: 700px;
+        margin: 0px auto;
+    }
+    li {
+        font-family: Arial;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        cursor: pointer; 
+        &.active {
+            border-bottom: 3px solid vars.$color_blue;
+            font-weight: bold;
+        }
+
+    }
+}
